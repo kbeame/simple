@@ -9,9 +9,11 @@ app.get('/something', (req, res) => {
 app.get('/*', (req, res) => {
   res.status(200)..json({msg: 'hello mooooooose'});
 })
+
 app.get('/greet/:name', (req, res) => {
   res.status(200).json({msg: 'hello ' + req.params.name})
 })
+
 app.listen(3000, () => console.log('Server...ITS ALIVE'));
 
 //the first thing that matches is the one that gets called.
